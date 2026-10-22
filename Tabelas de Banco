@@ -1,0 +1,24 @@
+-- create
+CREATE TABLE clientes (
+  id_cliente SERIAL PRIMARY KEY,
+  nome VARCHAR(100) NOT NULL,
+  cidade VARCHAR(50) NOT NULL,
+  idade INTEGER NOT NULL
+);
+
+INSERT INTO clientes (nome, cidade, idade) VALUES
+('Ana Sousa', 'Curitiba', 25),
+('Bruno Lima', 'Londrina', 32),
+('Carla Mendes', 'Siqueira Campos', 28),
+('Daniel Alves', 'Ibaiti', 40),
+('Eduarda Santos', 'Curitiba', 22),
+('Felipe Rocha', 'Jacarezinho', 35);
+
+
+
+-- fetch 
+SELECT *
+FROM clientes
+WHERE cidade = 'Curitiba'
+OR cidade = 'Londrina'
+AND idade > 20; 
