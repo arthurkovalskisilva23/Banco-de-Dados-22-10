@@ -1,0 +1,29 @@
+let xJogador = [350, 350, 350];
+let yJogador = [100, 200, 300];
+let jogador = ["🛻 ,🚗 ,🏎️"];
+let jogoAtivo = true;
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background ("#D2EBB5");
+
+  desenharLinhaDeChegada();
+  desenharJogadores();
+  verificarJogador();
+  verificarVencedor();
+}
+
+function desenharJogadores(){
+  textSize(40);
+
+  for (let i = 0; i < 3; i++){
+    text(jogador[i]), xJogador[i], yJogador[i];
+  }
+}
+
+function desenharLinhadeChegada() {
+  
+}
